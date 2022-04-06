@@ -6,8 +6,8 @@ jobs:
     steps:
     - run: echo "Job was triggered by ${{ github.event_name }}."
     - run: echo "This is running on ${{ runner.os }} server hosted by GitHub."
-    #- run: echo "branch: ${{ github.ref }}"
-    - run: echo "Repo: ${{ github.repository }}"
+    - run: echo "branch ${{ github.ref }}"
+    - run: echo "repo ${{ github.repository }}"
     - name: Check out repository code
       uses: actions/checkout@v3
     - run: echo "${{ github.repository }} has been cloned."
